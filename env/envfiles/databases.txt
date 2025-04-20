@@ -26,9 +26,9 @@ MONGO_DB_URL=mongodb://kobo:kobo@kobo.insightzen.svc:27017/formhub
 # containers. To control Django database connections, please see the
 # `DATABASE_URL` environment variable.
 POSTGRES_PORT=5432
-POSTGRES_HOST=post.insightzen.svc
+POSTGRES_HOST=postgres.insightzen.svc
 POSTGRES_USER=postgres
-POSTGRES_PASSWORD=rzMWtZPjqAe2wBv8NFA6
+POSTGRES_PASSWORD=ghqgwVBVNcfLWuwXn52bzHOXY1XnDwvW
 KC_POSTGRES_DB=kobocat
 KPI_POSTGRES_DB=koboform
 
