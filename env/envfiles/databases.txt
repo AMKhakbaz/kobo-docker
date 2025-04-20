@@ -5,14 +5,14 @@
 # `wait_for_mongo.bash` init script that runs within the kpi and kobocat.
 # Please see kobocat.txt to set container variables
 KOBO_MONGO_PORT=27017
-KOBO_MONGO_HOST=mongo.domain.name
+KOBO_MONGO_HOST=kobo.insightzen.svc
 MONGO_INITDB_ROOT_USERNAME=root
 MONGO_INITDB_ROOT_PASSWORD=kobo
 MONGO_INITDB_DATABASE=formhub
 KOBO_MONGO_USERNAME=kobo
-KOBO_MONGO_PASSWORD=kobo
+KOBO_MONGO_PASSWORD=hp3H4idlFY5J5k3Tyc89PXCJ1LBq4Ym0
 MONGO_DB_NAME=formhub
-MONGO_DB_URL=mongodb://kobo:kobo@mongo.domain.name:27017/formhub
+MONGO_DB_URL=mongodb://kobo:kobo@kobo.insightzen.svc:27017/formhub
 
 # Default MongoDB backup schedule is weekly at 01:00 AM UTC on Sunday.
 #MONGO_BACKUP_SCHEDULE=0 1 * * 0
@@ -26,9 +26,9 @@ MONGO_DB_URL=mongodb://kobo:kobo@mongo.domain.name:27017/formhub
 # containers. To control Django database connections, please see the
 # `DATABASE_URL` environment variable.
 POSTGRES_PORT=5432
-POSTGRES_HOST=postgres.domain.name
-POSTGRES_USER=kobo
-POSTGRES_PASSWORD=kobo
+POSTGRES_HOST=post.insightzen.svc
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=rzMWtZPjqAe2wBv8NFA6
 KC_POSTGRES_DB=kobocat
 KPI_POSTGRES_DB=koboform
 
@@ -45,14 +45,14 @@ KPI_DATABASE_URL=postgis://kobo:kobo@postgres.domain.name:5432/kobotoolbox
 
 #REDIS_BACKUP_SCHEDULE=0 3 * * 0
 
-REDIS_SESSION_URL=redis://:kobo@redis-cache.kobo.private:6380/2
-REDIS_PASSWORD=kobo
+REDIS_SESSION_URL=redis://:koboredis.insightzen.svc:6379/2
+REDIS_PASSWORD=ikUxkwjfFurmWuakPBvc8Uf2axVTIxIa
 CACHE_URL=redis://:kobo@redis-cache.kobo.private:6380/5
 # In bytes, uncomment to cap Redis Cache memory
 # REDIS_CACHE_MAX_MEMORY=
 
 REDIS_PASSWORD=${REDIS_PASSWORD}
-CACHE_URL=redis://:kobo@redis-cache.kobo.private:6380/5
+CACHE_URL=redis://:kobo@koboredis.insightzen.svc:6379/5
 REDIS_CACHE_MAX_MEMORY=
-SERVICE_ACCOUNT_BACKEND_URL=redis://:kobo@redis-cache.kobo.private:6380/6
-ENKETO_REDIS_MAIN_URL=redis://:kobo@redis-main.kobo.private:6379/0
+SERVICE_ACCOUNT_BACKEND_URL=redis://:kobo@koboredis.insightzen.svc:6379/6
+ENKETO_REDIS_MAIN_URL=redis://:kobo@koboredis.insightzen.svc:6379/0
